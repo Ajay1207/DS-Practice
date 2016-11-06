@@ -2,7 +2,7 @@
 
 CustomLinkedList::CustomLinkedList()
 {
-    head->data = 0;
+    head->data = NULL;
     head->next = NULL;
 
 }
@@ -127,5 +127,71 @@ void CustomLinkedList::erase(int location)
 
     }
 
+
+}
+
+void CustomLinkedList::swap(int x, int y)
+{
+    node *temp,*input_node1,*input_node2,*prev_node1,*prev_node2;
+
+    temp=this->head;
+
+    //Finding first node position
+    bool foundData1 = false;
+    bool foundData2 = false;
+    if(this->head->data== x || this->head->data==y)
+    {
+        throw invalid_argument("Cannot replace head");
+    }
+    while(temp->next !=NULL)
+    {
+
+        if(temp->data == x )
+        {
+            foundData1 = true;
+            break;
+        }
+        prev_node1 = temp;
+        temp = temp->next;
+
+    }
+    if(temp->next == NULL && temp->data == x)
+    {
+        foundData1=true;
+    }
+    if(!foundData1)
+        throw invalid_argument("Data not found");
+    input_node1 = temp;
+    //find second free(temp);
+    temp=this->head;
+    while(temp->next !=NULL)
+    {
+
+        if(temp->data == y )
+        {
+            foundData2=true;
+            break;
+        }
+
+        prev_node2 = temp;
+        temp = temp->next;
+
+    }
+    if(temp->next == NULL && temp->data == y)
+    {
+        foundData2=true;
+    }
+    if(!foundData2)
+        throw invalid_argument("Data not found");
+    input_node2 = temp;
+    //swap nodes
+    node *next_temp1, *next_temp2;
+
+    next_temp1 = input_node1->next;
+    next_temp2 = input_node2->next;
+    prev_node1->next = input_node2;
+    input_node2->next = input_node1->next;
+    next_temp1->next = input_node1;
+    input_node1->next = next_temp2;
 
 }

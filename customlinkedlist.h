@@ -23,6 +23,7 @@ public:
     void append_last(int value);
     void insert(int location, int value);
     void erase(int location);
+    void swap(int x, int y);
 };
 
 #endif // CUSTOMLINKEDLIST_H
