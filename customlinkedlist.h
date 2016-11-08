@@ -7,22 +7,56 @@
 
 using namespace std;
 
+/**
+ * @brief
+ *
+ */
 class CustomLinkedList
 {
+    /**
+     * @brief
+     *
+     */
     struct node
     {
-        int data;
-        node *next;
+        int data; /**< TODO */
+        node *next; /**< TODO */
     };
 
 
-    node *head;
+    node *head; /**< TODO */
 
 public:
+    /**
+     * @brief
+     *
+     */
     CustomLinkedList();
+    /**
+     * @brief
+     *
+     * @param value
+     */
     void append_last(int value);
+    /**
+     * @brief
+     *
+     * @param location
+     * @param value
+     */
     void insert(int location, int value);
+    /**
+     * @brief
+     *
+     * @param location
+     */
     void erase(int location);
+    /**
+     * @brief
+     *
+     * @param x
+     * @param y
+     */
     void swap(int x, int y);
 };
 

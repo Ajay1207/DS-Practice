@@ -1,5 +1,9 @@
 #include "customlinkedlist.h"
 
+/**
+ * A custom linked list
+ *
+ */
 CustomLinkedList::CustomLinkedList()
 {
     head->data = NULL;
@@ -7,6 +11,12 @@ CustomLinkedList::CustomLinkedList()
 
 }
 
+/**
+ * @brief
+ *
+ * @param location
+ * @param value
+ */
 void CustomLinkedList::insert(int location, int value)
 {
     node *new_node = (struct node*) malloc(sizeof(struct node));
@@ -46,6 +56,11 @@ void CustomLinkedList::insert(int location, int value)
 
 }
 
+/**
+ * @brief
+ *
+ * @param value
+ */
 void CustomLinkedList::append_last(int value)
 {
     node *new_node = (struct node*) malloc(sizeof(struct node));
@@ -77,6 +92,11 @@ void CustomLinkedList::append_last(int value)
 
 
 
+/**
+ * @brief
+ *
+ * @param location
+ */
 void CustomLinkedList::erase(int location)
 {
 
@@ -130,6 +150,12 @@ void CustomLinkedList::erase(int location)
 
 }
 
+/**
+ * @brief
+ *
+ * @param x
+ * @param y
+ */
 void CustomLinkedList::swap(int x, int y)
 {
     node *temp,*input_node1,*input_node2,*prev_node1,*prev_node2;
