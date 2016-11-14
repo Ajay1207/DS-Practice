@@ -49,6 +49,7 @@ public:
      *
      */
     void printItems();
+    bool isEmpty(stackNode *node);
 private:
     /**
      * @brief
@@ -63,7 +64,7 @@ private:
      * @param node
      * @return bool
      */
-    bool isEmpty(stackNode *node);
+
 
 
 };

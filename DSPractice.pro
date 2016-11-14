@@ -17,8 +17,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     customlinkedlist.cpp \
-    customstack.cpp
+    customstack.cpp \
+    playground.cpp
 
 HEADERS += \
     customlinkedlist.h \
-    customstack.h
+    customstack.h \
+    playground.h
