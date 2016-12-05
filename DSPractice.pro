@@ -18,9 +18,13 @@ TEMPLATE = app
 SOURCES += main.cpp \
     customlinkedlist.cpp \
     customstack.cpp \
-    playground.cpp
+    playground.cpp \
+    customqueue.cpp \
+    binarytree.cpp
 
 HEADERS += \
     customlinkedlist.h \
     customstack.h \
-    playground.h
+    playground.h \
+    customqueue.h \
+    binarytree.h
